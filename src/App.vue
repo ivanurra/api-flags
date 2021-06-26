@@ -1,13 +1,17 @@
 <template>
-<h2>COUNTRIES API</h2>
+  <div class="container">
+    <h2 class="text-center">COUNTRIES API</h2>
+    <CardList />
+  </div>
 </template>
 
 <script>
-
+import CardList from "./components/CardList.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-  }
-}
+    CardList,
+  },
+};
 </script>
 
