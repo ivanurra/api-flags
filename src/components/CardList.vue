@@ -1,20 +1,27 @@
 <template>
   <div class="row">
       <div class="col-12">
-          card
+          {{paises}}
       </div>
   </div>
 </template>
 
 <script>
-import { onMounted } from '@vue/runtime-core'
+import { computed, onMounted } from '@vue/runtime-core'
 import {useStore} from 'vuex'
 export default {
     setup(){
         const store = useStore()
+
+        const paises = computed (() => {
+            return store.state.paises
+        })
+
         onMounted(() => {
             store.dispatch('getPaises')
         })
+
+        return {paises}
     }
 }
 </script>
