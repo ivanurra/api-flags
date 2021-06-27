@@ -14,7 +14,7 @@ export default {
         const store = useStore()
 
         const paises = computed (() => {
-            return store.state.paises
+            return store.getters.topPaisesPoblacion
         })
 
         onMounted(() => {
