@@ -12,15 +12,12 @@ import {useStore} from 'vuex'
 export default {
     setup(){
         const store = useStore()
-
         const paises = computed (() => {
             return store.getters.topPaisesPoblacion
         })
-
         onMounted(() => {
             store.dispatch('getPaises')
         })
-
         return {paises}
     }
 }
