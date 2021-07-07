@@ -15,3 +15,9 @@ export default {
 };
 </script>
 
+<style>
+.container{
+  background: rgb(244, 244, 244);
+}
+</style>
+

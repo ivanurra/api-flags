@@ -1,10 +1,13 @@
 <template>
   <div class="card mb-4">
       <div class="card-body">
-          <h5>
+          <h2 class="text-center">
               {{pais.name}}
-          </h5>
-          <p class="card-text">
+          </h2>
+          <p class="text-center">
+              <img :src="pais.flag" alt="Flag" style="height:200px">
+          </p>
+          <p class="card-text text-center" style="margin-bottom:50px;">
               <span class="badge badge-dark d-block mb-1">Name: {{pais.nativeName}}</span><br>
               <span class="badge badge-info p-3 d-block mb-1">Population: {{numeroFormato(pais.population)}}</span><br>
               <span class="badge badge-dark d-block mb-1">Capital: {{pais.capital}}</span><br>
