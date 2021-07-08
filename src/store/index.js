@@ -16,7 +16,7 @@ export default createStore({
   actions: {
     async getPaises({commit}) {
       try {
-        const res = await fetch('https://restcountries.eu/rest/v2/all')
+        const res = await fetch('api.json')
         const data = await res.json()
         // console.log(data)
         commit('setPaises', data)
@@ -24,10 +24,16 @@ export default createStore({
         console.log(error)
       }
     },
+    filtrarRegion({commit, state}, region) {
+      const filtro = state.paises.filter(pais => 
+        pais.region.includes(region)
+      )
+      commit('setPaisesFiltrados', filtro)
+    }
   },
   getters: {
     topPaisesPoblacion(state){
-      return state.paises.sort((a,b) => {
+      return state.paisesFiltrados.sort((a,b) => {
         return a.population < b.population ? 1 : -1;
       })
     }

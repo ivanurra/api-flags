@@ -20,8 +20,9 @@ export default {
         const paises = computed (() => {
             return store.getters.topPaisesPoblacion
         })
-        onMounted(() => {
-            store.dispatch('getPaises')
+        onMounted(async() => {
+            await store.dispatch('getPaises')
+            await store.dispatch('filtrarRegion', 'Americas')
         })
         return {paises}
     }
