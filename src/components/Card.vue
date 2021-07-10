@@ -5,7 +5,10 @@
               {{pais.name}}
           </h2>
           <p class="text-center">
-              <img :src="pais.flag" alt="Flag" style="height:150px">
+              <img 
+              :src="pais.flag" 
+              alt="Flag" 
+              style="height:170px">
           </p>
           <p class="card-text text-center" style="margin-bottom:50px;">
               <span class="badge badge-dark d-block mb-1">Name: {{pais.nativeName}}</span><br>

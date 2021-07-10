@@ -2,7 +2,8 @@
   <div class="row">
       <div 
       class="col-12"
-      v-for="pais in paises" :key="pais.name"
+      v-for="pais in paises" 
+      :key="pais.name"
       >
         <Card :pais="pais"/>
       </div>
