@@ -1,7 +1,7 @@
 <template>
   <input 
   type="text"
-  placeholder="Find a country"
+  placeholder="Write a country"
   class="form-control my-3"
   v-model="texto"
   @keyup="procesarInput"
