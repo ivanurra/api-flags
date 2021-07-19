@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <h2 class="text-center">COUNTRIES API</h2>
+    <h2 class="text-center">COUNTRIES BY POPULATION</h2>
+    <p class="text-center">API: https://restcountries.eu/</p>
     <Continents />
     <Buscador />
     <CardList />
